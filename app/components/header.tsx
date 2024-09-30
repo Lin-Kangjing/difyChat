@@ -1,7 +1,7 @@
 /*
  * @Date: 2024-09-29 15:29:22
  * @LastEditors: LinKangjing linkangjing@foxmail.com
- * @LastEditTime: 2024-09-30 17:00:22
+ * @LastEditTime: 2024-09-30 17:29:15
  * @FilePath: \webapp-conversation\app\components\header.tsx
  * @Description:
  */
@@ -45,12 +45,12 @@ const KnowledgeBasePopup: FC = () => {
 
   return (
     <div className='absolute bottom-0 w-full bg-white rounded-t-2xl p-4'>
-      <div className="text-base text-gray-500">切换知识领域</div>
+      <div className="text-base font-bold text-gray-500">切换知识领域</div>
       <div className="mt-4 w-full flex flex-wrap gap-4 ">
         {bases.map((base) => {
           const isCurrent = base.id === current
           return (
-            <div key={base.id} className={classnames('flex flex-col justify-around align-middle p-2 bg-gray-100 rounded-xl text-center cursor-pointer', isCurrent ? 'bg-green-50' : '')
+            <div key={base.id} className={classnames('flex flex-col justify-around align-middle p-2 bg-gray-100 rounded-xl text-center cursor-pointer font-bold', isCurrent ? 'bg-green-50' : '')
             } style={{ flex: '1 0 40%' }} onClick={() => selectBase(base)}>
               <div className={classnames('text-base', isCurrent ? 'text-green-700' : '')}>{base.name}</div>
               <div className="text-sm text-gray-500 mt-1">{base.desc}</div>
